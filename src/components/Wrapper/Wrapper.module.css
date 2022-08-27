@@ -1,0 +1,9 @@
+.Wrapper {
+  width: 100%;
+  padding: 1rem;
+}
+
+.Wrapper > h2 {
+  text-align: center;
+  color: var(--my-gray);
+}

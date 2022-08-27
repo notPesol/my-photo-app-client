@@ -1,0 +1,7 @@
+.Image {
+  max-width: 400px;
+}
+
+.Image img {
+  width: 100%;
+}

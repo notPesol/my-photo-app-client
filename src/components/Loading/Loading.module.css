@@ -1,0 +1,19 @@
+.Loading {
+  width: 100px;
+  height: 100px;
+  border: 20px solid var(--my-gray);
+  border-top: 20px solid var(--my-blue);
+  border-radius: 50%;
+  margin: 0 auto;
+  grid-column: 1 / span 3;
+  animation: spin 2s ease infinite forwards;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

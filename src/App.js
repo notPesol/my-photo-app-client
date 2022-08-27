@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import AddImage from "./components/AddImage/AddImage";
+import Layout from "./components/Layout/Layout";
+import AllImages from "./components/AllImages/AllImages";
+import SingleImage from "./components/SingleImage/SingleImage";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Switch>
+        <Route path="/" exact component={AllImages} />
+        <Route path="/add" component={AddImage} />
+        <Route path="/:id" component={SingleImage} />
+        <Redirect to="/" />
+      </Switch>
+    </Layout>
   );
-}
+};
 
 export default App;
